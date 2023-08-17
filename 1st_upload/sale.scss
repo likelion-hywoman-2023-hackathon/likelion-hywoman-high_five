@@ -1,0 +1,128 @@
+%btn{
+    border: none;
+    padding: 3px;
+    background-color: #E56666;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+}
+@mixin translate($location:(-50%, -50%)){
+       /* 정가운데 정렬 */
+    position: absolute;
+    transform: translate($location);
+    left: 50%;
+    top: 50%
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 200px;
+}
+.header{
+    /* border: 1px solid red; */
+    margin: 20px 0;
+    h1{
+        text-align: center;
+    }
+}
+.nav{
+    /* 가운데 정렬 */
+    display: felx;   
+    flex-flow: row wrap;  
+    justify-content: center;  
+    nav{
+        margin: 40px 0;
+        font-size: 18px;
+        label{
+            padding-right: 33px;
+            font-size: 23px;
+        }
+        button{
+            @extend %btn;
+        }
+    }
+}
+.container{
+    .notice{
+        margin-bottom: 40px;
+        h5{
+            padding-left: 15px;
+            span{
+                @extend %btn;
+            }
+        }
+    }
+    .sale{
+        /* border: 1px solid yellow; */
+        text-align: center;
+        margin: 20px 0 40px;
+        .product{
+            /* border: 1px solid black; */
+            h3{
+                text-align: left;
+                padding: 10px 0px 10px 15px;
+            }
+        }
+        .contents{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            'a b c';
+            .img{
+                /* border: 1px solid red; */
+                grid-area: a;
+                text-align: center;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .price{
+                /* border: 1px solid blue; */
+                grid-area: b;
+                position: relative;   /* 정가운데 정렬 */
+                .original{
+                    @include translate($location:(-50%, -120%));
+                    text-decoration:line-through;
+                    font-size: 20px;
+                }
+                .salePrice{
+                    @include translate($location:(-50%, -20%));
+                    color: #E56666;
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            }
+            .etc{
+                /* border: 1px solid green; */
+                grid-area: c;
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
+                .stock{
+                    position: relative;   /* 정가운데 정렬 */
+                    .stockTxt{
+                        display: inline-block;   /* 정가운데 정렬 */
+                        @include translate;
+                        font-size: 20px;
+                    }
+                }
+                .reservation{
+                    /* border: 1px solid black; */
+                    position: relative;   /* 정가운데 정렬 */
+                    .rsv{
+                        @include translate;
+                        @extend %btn;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    body{
+        margin: 0px;
+    }
+}
