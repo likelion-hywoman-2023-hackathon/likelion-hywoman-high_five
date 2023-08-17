@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "TheJamsil5Bold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-style: normal;
+  }
+
+body {
+    background-color: #fafafa;
+    font-family: "Pretendard-Regular";
+    margin: 0 160px;
+    padding: 0;
+}
+  
+header {
+    list-style: none; 
+    padding: 10px 0 20px;
+    /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12); */
+    /* background-color: #fff; */
+    padding: 10px 0 20px;
+    border-radius: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "TheJamsil5Bold";
+    font-size: 60px;
+    margin: auto;
+}
+
+main {
+    padding: 2rem;
+}
+
+main p {
+    margin-top: 1rem;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+#subTitle{
+    padding: 0;
+}
+
+#table{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: 'a b c d';
+    background-color: #c2c2c2;
+}
+#table div{
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+}
+#table div:nth-child(1){
+    grid-area: a;
+}
+#talbe div:nth-child(2){
+    grid-area: b;
+}
+#table div:nth-child(3){
+    grid-area: c;
+}
+#table div:nth-child(4){
+    grid-area: d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    border-radius: 40px;
+    width: 100%;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.item-block {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: 'd e f i';
+    font-size: 40px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #c3c3c3;   /* 구분선 */
+}
+.item-block p{
+    text-align: center;
+    padding: 0;
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'g h';
+}
+.blockImg{
+    grid-area: g;
+    padding-left: 1rem;
+}
+.blockName{
+    grid-area: h;
+    position: relative;
+}
+.blockName p{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.stock{
+    grid-area: e;
+    position: relative;
+}
+.stock p{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.price{
+    grid-area: f;
+    position: relative;
+}
+.price p{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    /* 글자 안 내려가게 */
+    display: block;
+    white-space: nowrap;
+}
+.product img {
+    width: 200px;
+    height: 200px; 
+    margin-right: 1rem;
+}
+.total{
+    grid-area: i;
+    position: relative;
+}
+.total p{
+    position: absolute;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    /* 글자 안 내려가게 */
+    display: block;
+    white-space: nowrap;
+}
+#footer{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'k l';
+}
+.barcode{
+    grid-area: k;
+    margin: auto;   /* 정가운데 정렬 */
+}
+.modal-content{
+    text-align: center;
+}
+.modal-footer button{
+    margin: auto;   /* 정가운데 정렬 */
+}
+#total{
+    grid-area: l;
+    padding: 50px;
+}
+#total p{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    /* 글자 안 내려가게 */
+    white-space: nowrap;
+}

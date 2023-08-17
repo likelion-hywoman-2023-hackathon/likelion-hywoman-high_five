@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 200px;
+  }
+  
+  header {
+    /* border: 1px solid red; */
+  }
+  
+  header h1 {
+    text-align: center;
+    margin: 50px 0 30px;
+    font-family: "TheJamsil5Bold";
+  }
+
+.container{
+  font-family: "Pretendard-Regular";
+}
+
+  .container a {
+    text-decoration: none;
+    color: #000;
+  }
+  .container a .sale {
+    /* border: 1px solid red; */
+    margin: 60px 40px;
+    padding: 30px 0;
+    background: rgb(1, 167, 1);
+    border-radius: 10px;
+  }
+  .container a .sale p {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      margin: 0;
+    }
+  }

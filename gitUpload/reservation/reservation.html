@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>물품 예약 조회</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<link rel="stylesheet" href="reservation.css">
+<link rel="stylesheet" href="media.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/1ae82cd2be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <p>물품 예약 조회</p>
+  </header>
+  <main>
+    <section id="reservation-list">
+      <p id="subTitle">예약된 물품 목록</p>
+      <div id="table">
+        <div>상품정보</div>
+        <div>수량</div>
+        <div>가격</div>
+        <div>합계</div>
+      </div>
+      <ul id="items-list">
+      </ul>
+    </section>
+  </main>
+  <div id="footer">
+    <!-- Button trigger modal -->
+    <div class="barcode">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 30px; padding: .375rem 2rem; background-color: rgb(88, 197, 80); border: none;">
+        직원 확인용
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">예약 확인용 바코드</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="barcode.png" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="total">
+      <p>최종 결제금액: 6000원</p>
+    </div>
+  </div>
+  <script src="reservation.js"></script>
+</html>
